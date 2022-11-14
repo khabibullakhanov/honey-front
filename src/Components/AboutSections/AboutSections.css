@@ -1,0 +1,50 @@
+#about-sections-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+}
+
+.about-section-card {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.about-sections-texts {
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #FEA538;
+    padding-right: 5%;
+}
+
+.about-sections-texts p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.about-sections {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+.about-sections>img {
+    width: 80%;
+}
+
+#about-toq-divs {
+    flex-direction: row-reverse;
+    width: 90%;
+}   

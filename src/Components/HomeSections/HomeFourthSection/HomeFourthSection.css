@@ -46,3 +46,35 @@
     outline: none;
     width: 180px;
 }
+
+@media (max-width: 800px) {
+    #home-fourth-section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+    }
+
+    #home-fourth-section>figure {
+        width: 60%;
+    }
+    
+    #home-fourth-section>div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #home-fourth-section>div>p {
+        font-size: 100%
+    }
+
+    #home-fourth-section>div>button {
+        width: 100%;
+    }
+}

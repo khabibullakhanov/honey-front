@@ -7,15 +7,14 @@ import { ProductView } from "./Pages/Product View/ProductView"
 import { About } from "./Pages/About/About"
 import { Navbar } from "./Components/Navbar/Navbar"
 import { Footer } from "./Components/Footer/Footer"
+import "./Assets/Css/Global.css";
 
 
 export function Router() {
     return (
-        <div id="router_container">
-            <div id="router-left-content">
-                <Navbar />
-            </div>
-            <Routes>
+        <div id="router">
+            <Navbar />
+            <Routes >
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/products" element={<Products />} />

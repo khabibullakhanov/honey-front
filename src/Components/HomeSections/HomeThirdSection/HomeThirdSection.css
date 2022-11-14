@@ -34,6 +34,7 @@
     box-shadow: -5px 10px 4px rgba(0, 0, 0, 0.3);
     transition: 0.4s ease-in-out;
 }
+
 #home-third-section>div>button {
     background-color: #e58211;
     border: none;
@@ -45,4 +46,35 @@
     line-height: 160%;
     outline: none;
     width: 180px;
+}
+
+@media (max-width: 800px) {
+    #home-third-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #home-third-section>figure {
+        width: 60%;
+    }
+    
+    #home-third-section>div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #home-third-section>div>p {
+        font-size: 100%
+    }
+
+    #home-third-section>div>button {
+        width: 100%;
+    }
 }

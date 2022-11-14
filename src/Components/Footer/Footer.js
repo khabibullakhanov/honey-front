@@ -9,24 +9,65 @@ import playMarket from "../../Assets/Icons/playmarket.svg"
 import appstore from "../../Assets/Icons/appstore.svg"
 
 export function Footer() {
+    const icons = [
+        {
+            id: 0,
+            icon: facebook,
+        },
+        {
+            id: 1,
+            icon: twitter,
+        },
+        {
+            id: 2,
+            icon: pinterest,
+        },
+        {
+            id: 3,
+            icon: google,
+        },
+    ];
+
+    const markets = [
+        {
+            id: 0,
+            icon: playMarket,
+        },
+        {
+            id: 1,
+            icon: appstore,
+        },
+    ];
+
     return (
-        <div id="footer-main-container">
-            <div id='footer-main-container-first-section'>
-                <figure>
+        <div id="footer">
+            <div className="footer-about">
+                <figure
+                    className="footer-logo">
                     <img src={blackLogo} alt="" />
                 </figure>
-                <p>Honey is one of the prime ingredients in your everyday food schedule. </p>
+                <p>
+                    Honey is one of the prime ingredients in your everyday food schedule.
+                </p>
             </div>
-            <div id='footer-logos-container'>
-                <img src={facebook} alt="" />
-                <img src={twitter} alt="" />
-                <img src={google} alt="" />
-                <img src={pinterest} alt="" />
+            <div className="footer-icon-container">
+                {icons.map((item) => {
+                    return (
+                        <figure key={item.id} className="footer-icons-figure">
+                            <img src={item.icon} alt="" />
+                        </figure>
+                    );
+                })}
             </div>
-            <div id='footer-social-container'>
-                <img src={playMarket} alt="" />
-                <img src={appstore} alt="" />
+            <div className="footer-markets-container">
+                {markets.map((item) => {
+                    return (
+                        <figure key={item.id} className="footer-markets-figure">
+                            <img src={item.icon} alt="" />
+                        </figure>
+                    )
+                })}
             </div>
         </div>
-    )
+    );
 }
