@@ -1,0 +1,68 @@
+#home-intro-main-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#home-intro-main-container>figure {
+    width: 100%;
+}
+
+#home-intro-main-container>figure>img {
+    width: 100%;
+}
+
+#home-intro-btns-container {
+    position: absolute;
+    width: 35%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 20%;
+    left: 10%;
+}
+
+#home-intro-btns-container>button {
+    width: 48%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 160%;
+}
+
+#home-intro-btns-container :first-child {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#home-intro-btns-container :last-child {
+    background: none;
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+@media (max-width: 950px) {
+    #home-intro-btns-container > button {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #home-intro-btns-container > button {
+      font-size: 7px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    #home-intro-btns-container > button {
+      font-size: 4px;
+    }
+  }

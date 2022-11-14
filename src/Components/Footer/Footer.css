@@ -1,0 +1,39 @@
+#footer-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 140px;
+    padding: 0 15%;
+    background: linear-gradient(76.02deg, #FF9D2D 1.66%, #FFD877 93.21%);
+}
+
+#footer-main-container-first-section {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    width: 40%;
+}
+
+#footer-main-container-first-section > figure {
+    width: 15%;
+}
+
+#footer-main-container-first-section > p {
+    width: 80%;
+}
+
+#footer-logos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    gap: 2rem;
+}
+
+#footer-social-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}

@@ -1,0 +1,21 @@
+#home-second-section {
+    position: relative;
+    width: 100%;
+    padding: 5% 0 5% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+    justify-content: flex-start;
+}
+
+#home-second-section > h1{
+    font-weight: 900;
+}
+
+#home-second-section > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
