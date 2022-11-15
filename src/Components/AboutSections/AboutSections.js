@@ -15,7 +15,7 @@ export function AboutSections() {
         {
             id: 1,
             img: secondImage,
-            clasname: "about-toq-divs",
+            clasname: "about-problems",
         },
         {
             id: 2,
@@ -25,20 +25,20 @@ export function AboutSections() {
         {
             id: 3,
             img: fourthImage,
-            clasname: "about-toq-divs",
+            clasname: "about-problems",
         },
     ];
     return (
-        <div id='about-sections-container'>
+        <div id="about-sec1">
             {aboutSection.map((item) => {
                 return (
-                    <div className="" key={item.id} id={item.idname}>
-                        <figure className="about-sections">
+                    <div className="about-sec1-card" key={item.id} id={item.clasname}>
+                        <figure className="about-card-img">
                             <img src={item.img} alt="" />
                         </figure>
 
-                        <div className="about-sections-texts">
-                            <h3>What is Lorem Ipsum?</h3>
+                        <div className="about-texts">
+                            <p>What is Lorem Ipsum?</p>
                             <p>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting
                                 industry. Lorem Ipsum has been the industry's standard dummy

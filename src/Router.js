@@ -9,7 +9,6 @@ import { Navbar } from "./Components/Navbar/Navbar"
 import { Footer } from "./Components/Footer/Footer"
 import "./Assets/Css/Global.css";
 
-
 export function Router() {
     return (
         <div id="router">
@@ -22,6 +21,7 @@ export function Router() {
                 <Route path="/product_view/:id" element={<ProductView />} />
             </Routes>
             <Footer />
+
         </div>
     );
 }

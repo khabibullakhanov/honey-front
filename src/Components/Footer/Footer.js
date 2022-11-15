@@ -28,7 +28,7 @@ export function Footer() {
         },
     ];
 
-    const markets = [
+    const stores = [
         {
             id: 0,
             icon: playMarket,
@@ -60,7 +60,7 @@ export function Footer() {
                 })}
             </div>
             <div className="footer-markets-container">
-                {markets.map((item) => {
+                {stores.map((item) => {
                     return (
                         <figure key={item.id} className="footer-markets-figure">
                             <img src={item.icon} alt="" />
