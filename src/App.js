@@ -8,12 +8,12 @@ export function App() {
   const loading = useSelector((state) => state.loading);
 
   return (
-    <div className="App">
+    <>
       <Router />
       <Backdrop sx={{ color: "#fff", zIndex: "99999999999999" }} open={loading}>
         <CircularProgress color="inherit" />
       </Backdrop>
-    </div>
+    </>
   );
 }
 

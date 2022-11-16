@@ -29,16 +29,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: #ccc;
 }
 
 #root {
-  max-width: 1600px;
   width: 100%;
+  max-width: 1600px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   background-color: #ffffff;
 }
 
@@ -48,6 +49,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#router-center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 input:-webkit-autofill,
@@ -71,41 +80,4 @@ input::-webkit-inner-spin-button {
 ::-webkit-scrollbar-thumb {
   background: #004d40;
   border-radius: 10px;
-}
-
-table {
-  border-collapse: collapse;
-  width: 90%;
-}
-
-thead {
-  text-align: center;
-  color: #004d40;
-  width: 100%;
-  height: 60px;
-  font-weight: 600;
-  background: #a6a6a6;
-  position: sticky;
-  top: 0;
-}
-
-tbody> :nth-child(odd) {
-  background: rgb(217, 239, 253);
-}
-
-tbody> :nth-child(even) {
-  background: rgba(0, 77, 64, 0.05);
-}
-
-td>figure>img {
-  width: 80px;
-  height: 80px;
-}
-
-td {
-  text-align: center;
-}
-
-tr {
-  height: 100px;
 }

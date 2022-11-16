@@ -5,7 +5,7 @@ import { acLoading } from '../../Redux/Loading'
 import axios from "axios"
 import { useNavigate } from 'react-router-dom'
 import { Pagination } from "../Pagination/Pagination"
-import das from "../../Assets/Images/background.jpg"
+// import Image from "../../Assets/Images/Example Honey.png"
 
 export function OurProducts() {
 

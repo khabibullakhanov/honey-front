@@ -14,7 +14,6 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
   const location = useLocation();
   const path = location.pathname
-  console.log(path);
   return (
     <>
       <div
@@ -29,7 +28,7 @@ export function Navbar() {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/products">Our Product</NavLink>
-          <NavLink to="/contacts">Contact</NavLink>
+          <NavLink to="/orders">Orders</NavLink>
           <IconButton id='navbar-menu-icon'
             onClick={() => {
               setOpen(true)
