@@ -8,12 +8,39 @@ import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import { Drawer } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
-
+import HomeSharpIcon from '@mui/icons-material/HomeSharp';
+import InfoSharpIcon from '@mui/icons-material/InfoSharp';
+import CategorySharpIcon from '@mui/icons-material/CategorySharp';
+import BorderColorSharpIcon from '@mui/icons-material/BorderColorSharp';
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const location = useLocation();
   const path = location.pathname
+
+
+  const navLinks = [
+    {
+      name: "Home",
+      icons: <HomeSharpIcon />,
+      pathName: "/",
+    },
+    {
+      name: "About",
+      icons: <InfoSharpIcon />,
+      pathName: "/about",
+    },
+    {
+      name: "Products",
+      icons: <CategorySharpIcon />,
+      pathName: "/products",
+    },
+    {
+      name: "Orders",
+      icons: <BorderColorSharpIcon />,
+      pathName: "/orders",
+    },
+  ]
   return (
     <>
       <div
@@ -25,10 +52,16 @@ export function Navbar() {
           </NavLink>
         </figure>
         <div id='navbar-main-right-content'>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/products">Our Product</NavLink>
-          <NavLink to="/orders">Orders</NavLink>
+          {navLinks.map((item, index) => {
+            return (
+              <>
+              <NavLink to={item.pathName}>{item.name}</NavLink>
+              </>
+            )
+          })}
+          {/* <NavLink to="/">Home</NavLink>
+          <NavLink to="/products">Products</NavLink>
+          <NavLink to="/orders">Orders</NavLink> */}
           <IconButton id='navbar-menu-icon'
             onClick={() => {
               setOpen(true)
@@ -55,26 +88,15 @@ export function Navbar() {
           />
         </div>
         <div className="drawer">
-          <NavLink
+          {navLinks.map((link, index) => {
+            return (
+              <NavLink
             onClick={() => {
               setOpen(false)
             }}
-            to="/">Home</NavLink>
-          <NavLink
-            onClick={() => {
-              setOpen(false)
-            }}
-            to="/about">About</NavLink>
-          <NavLink
-            onClick={() => {
-              setOpen(false)
-            }}
-            to="/products">Our Product</NavLink>
-          <NavLink
-            onClick={() => {
-              setOpen(false)
-            }}
-            to="/contacts">Contact</NavLink>
+            to={link.pathName}>{link.icons} {link.name}</NavLink>
+            )
+          })}
         </div>
       </Drawer>
     </>
