@@ -54,9 +54,9 @@ export function Navbar() {
         <div id='navbar-main-right-content'>
           {navLinks.map((item, index) => {
             return (
-              <>
+              <div key={index}>
               <NavLink to={item.pathName}>{item.name}</NavLink>
-              </>
+              </div>
             )
           })}
           {/* <NavLink to="/">Home</NavLink>
@@ -88,9 +88,10 @@ export function Navbar() {
           />
         </div>
         <div className="drawer">
-          {navLinks.map((link, index) => {
+          {navLinks.map((link, indeks) => {
             return (
               <NavLink
+              key={indeks}
             onClick={() => {
               setOpen(false)
             }}
