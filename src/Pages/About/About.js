@@ -2,7 +2,6 @@ import React from 'react'
 import { AboutSections } from '../../Components/AboutSections/AboutSections'
 import "./About.css"
 import aboutIntroImage from "../../Assets/Images/about header image.jpg"
-import { OurProducts } from '../../Components/Our Products/OurProducts'
 
 
 export function About() {
