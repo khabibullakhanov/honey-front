@@ -71,7 +71,7 @@ export function ViewOrder() {
           <p>Telefon: {orderData.phone}</p>
           <p>Narxi: {orderData.price}sum </p>
           <p>Manzil: {orderData.address} </p>
-          <div
+          <p
             style={{
               display: "flex",
               justifyContent: "center",
@@ -80,25 +80,20 @@ export function ViewOrder() {
             }}
           >
             Buyurtma Xolati:
-            <figure className="status">
-              <img
-                src={orderData.status === 1 ? "Tasdiqlangan" : "Tasdiqlanmagan"}
-                alt=""
-              />
-            </figure>
-          </div>
-          <div id="btns">
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                deletOrder(id);
-                navigate(-1);
-              }}
-            >
-              Buyurtmani bekor qilish
-            </button>
-          </div>
+              <p style={orderData.status === 1 ? { color: "green" } : { color: "red" }}>{orderData.status === 1 ? "Tasdiqlangan" : "Tasdiqlanmagan"}</p>
+          </p>
         </div>
+      </div>
+      <div id="btns">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            deletOrder(id);
+            navigate(-1);
+          }}
+        >
+          Buyurtmani bekor qilish
+        </button>
       </div>
     </div>
   );
