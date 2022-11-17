@@ -11,8 +11,10 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { MostView } from "./MostViewed/MostView";
+import { useNavigate } from "react-router-dom";
 
 export function ProductView() {
+  const navigate = useNavigate()
   const dispatch = useDispatch();
   const location = useLocation();
   const id = location.pathname.split("/").pop();
@@ -49,7 +51,7 @@ export function ProductView() {
       <div className="product-view-container">
         <div className="product-view-img">
           <Swiper
-          
+
             effect={"cards"}
             grabCursor={true}
             modules={[EffectCards]}
@@ -83,7 +85,11 @@ export function ProductView() {
             >
               Xarid qilish
             </button>
-            <button>Biz bilan Bog'laning</button>
+            <button
+              onClick={() => {
+                navigate("/orders")
+              }}
+            >Mening Buyurtmalarim</button>
           </div>
         </div>
       </div>

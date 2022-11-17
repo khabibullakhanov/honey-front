@@ -9,9 +9,10 @@ export function Search() {
     const dispatch = useDispatch();
     return (
         <div className="search-main-container">
-            <h1>Buyurtmangizni ko'rish uchun Telefon rqamingizni kiriting</h1>
+            <h1 id='order-header-text'>Buyurtmangizni ko'rish uchun Telefon rqamingizni kiriting</h1>
             <form className="order-sec1-search-form">
                 <input
+                    autoComplete='off'
                     type="number"
                     name="phone"
                     placeholder="Telefon raqamingizni kiriting"

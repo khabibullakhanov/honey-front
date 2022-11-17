@@ -57,7 +57,7 @@ const MyOrders = () => {
 
     return (
         <div id="main-order-container">
-            <h1>Sizning buyurtmalaringiz !</h1>
+            <h1 id="order-header-text2">Sizning buyurtmalaringiz !</h1>
             <div id="order-inside-container">
                 {orders
                     .filter((item) => item.phone.includes(search))
@@ -67,21 +67,24 @@ const MyOrders = () => {
                                 <figure className="order-sec1-card-figure">
                                     <img src={item.img} alt="" />
                                 </figure>
+                                <div id="order-sec1-inside">
+                                    <div id="order-sec1-inside-top">
+                                        <div className="order-sec1-card-texts">
+                                            <p>
+                                                {item.name} {item.weight}
+                                            </p>
+                                            <p>phone: {item.phone}</p>
+                                            <p>{item.price} so'm</p>
+                                            <p>
+                                                Status: {item.status ? "Tasdiqlangan" : "Tasdiqlanmagan"}
+                                            </p>
+                                        </div>
 
-                                <div className="order-sec1-card-texts">
-                                    <p>
-                                        {item.name} {item.weight}
-                                    </p>
-                                    <p>phone: {item.phone}</p>
-                                    <p>{item.price} so'm</p>
-                                    <p>
-                                        Status: {item.status ? "Tasdiqlangan" : "Tasdiqlanmagan"}
-                                    </p>
-                                </div>
-
-                                <div className="order-sec1-card-texts">
-                                    <p>{item.date.split("-").join(".")}</p>
-                                    <p>3 kunda yetkazib beriladi</p>
+                                        <div className="order-sec1-card-texts">
+                                            <p>{item.date.split("-").join(".")}</p>
+                                            <p>3 kunda yetkazib beriladi</p>
+                                        </div>
+                                    </div>
                                     <div className="order-sec1-card-btns">
                                         <button
                                             onClick={(e) => {
