@@ -62,6 +62,7 @@ const MyOrders = () => {
                 {orders
                     .filter((item) => item.phone.includes(search))
                     .map((item) => {
+                        const sana = new Date(item.date).toLocaleDateString()
                         return (
                             <div key={item.id} className="order-sec1-card">
                                 <figure className="order-sec1-card-figure">
@@ -81,7 +82,7 @@ const MyOrders = () => {
                                         </div>
 
                                         <div className="order-sec1-card-texts">
-                                            <p>{item.date.split("-").join(".")}</p>
+                                            <p>{sana}</p>
                                             <p>3 kunda yetkazib beriladi</p>
                                         </div>
                                     </div>
